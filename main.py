@@ -13,7 +13,7 @@ def process():
         img = Image.open(os.path.join(path, f))
         img = numpy.asarray(img) * mask
         img = Image.fromarray(img)
-        img.save(os.path.join(new_path, f.lower()))
+        img.save(os.path.join(new_path, f))
         print(f)
 
 

@@ -14,7 +14,7 @@ def process():
         img = numpy.asarray(img) * mask
         img = Image.fromarray(img)
         img.save(os.path.join(new_path, f))
-        print(f)
+        print(f'{f} processed')
 
 
 path = argv[1]
@@ -29,7 +29,7 @@ mask -= 1
 mask *= -1
 mask = mask.astype(numpy.uint8)
 mask = numpy.stack([mask] * 4, 2)
-print('mask')
+print('Mask processed')
 
 files = os.listdir(path)
 files.sort()
